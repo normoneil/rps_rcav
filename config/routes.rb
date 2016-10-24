@@ -54,6 +54,13 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
+  # this is first
+  # /rock is the URL
+  # :controller is the game_controller you will call under app
+  # :action is what to play
+  # next, go to app, controllers, create new file called "game_controller.rb"
+  # This new file under app is the GameController class you just called
+
   get("/rock", { :controller => "game", :action => "user_plays_rock" })
 
 
