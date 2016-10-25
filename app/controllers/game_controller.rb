@@ -29,24 +29,21 @@ class GameController < ApplicationController
     @user_move = "rock"
     @computer_move = ["rock", "paper", "scissors"].sample
     @game_result = game_turn(@user_move, @computer_move)
-
-    render("game/play_rock.html.erb")
+    render("game/play_all.html.erb")
   end
 
   def user_plays_paper
     @user_move = "paper"
     @computer_move = ["rock", "paper", "scissors"].sample
     @game_result = game_turn(@user_move, @computer_move)
-
-    render("game/play_paper.html.erb")
+    render("game/play_all.html.erb")
   end
 
   def user_plays_scissors
     @user_move = "scissors"
     @computer_move = ["rock", "paper", "scissors"].sample
     @game_result = game_turn(@user_move, @computer_move)
-
-    render("game/play_scissors.html.erb")
+    render("game/play_all.html.erb")
   end
 
 end
