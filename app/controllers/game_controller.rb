@@ -34,12 +34,18 @@ class GameController < ApplicationController
   end
 
   def user_plays_paper
-    @play = rand(100)
+    @user_move = "paper"
+    @computer_move = ["rock", "paper", "scissors"].sample
+    @game_result = game_turn(@user_move, @computer_move)
+
     render("game/play_paper.html.erb")
   end
 
   def user_plays_scissors
-    @play = rand(100)
+    @user_move = "scissors"
+    @computer_move = ["rock", "paper", "scissors"].sample
+    @game_result = game_turn(@user_move, @computer_move)
+
     render("game/play_scissors.html.erb")
   end
 
