@@ -61,6 +61,7 @@ Rails.application.routes.draw do
   # next, go to app, controllers, create new file called "game_controller.rb"
   # This new file under app is the GameController class you just called
 
+  get("/", { :controller => "game", :action => "user_plays_rock" })
   get("/rock", { :controller => "game", :action => "user_plays_rock" })
   get("/paper", { :controller => "game", :action => "user_plays_paper" })
   get("/scissors", { :controller => "game", :action => "user_plays_scissors" })
